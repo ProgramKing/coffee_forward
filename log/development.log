@@ -1,0 +1,63 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (34.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (36.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateGifts (20131107010627)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "gifts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar(255), "from" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131107010627')[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-06 20:39:54 -0500
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (67ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-06 20:40:44 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-11-06 20:41:21 -0500
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/gifts/index" for 127.0.0.1 at 2013-11-06 20:41:27 -0500
+Processing by GiftsController#index as HTML
+  [1m[36mGift Load (0.1ms)[0m  [1mSELECT "gifts".* FROM "gifts" [0m
+  Rendered gifts/index.html.erb within layouts/application (17.1ms)
+Compiled gifts.css  (143ms)  (pid 18190)
+Compiled application.css  (183ms)  (pid 18190)
+Compiled jquery.js  (4ms)  (pid 18190)
+Compiled jquery_ujs.js  (26ms)  (pid 18190)
+Compiled gifts.js  (559ms)  (pid 18190)
+Compiled application.js  (689ms)  (pid 18190)
+Completed 200 OK in 1126ms (Views: 1041.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-06 20:41:28 -0500
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-06 20:41:28 -0500
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/gifts.js?body=1" for 127.0.0.1 at 2013-11-06 20:41:28 -0500
+Served asset /gifts.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-06 20:41:28 -0500
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/gifts.css?body=1" for 127.0.0.1 at 2013-11-06 20:41:28 -0500
+Served asset /gifts.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-06 20:41:28 -0500
+Served asset /jquery_ujs.js - 200 OK (1ms)
